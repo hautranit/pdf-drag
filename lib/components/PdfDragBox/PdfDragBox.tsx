@@ -110,7 +110,14 @@ const PdfDragBoxComponent = (props: PdfDragBoxProps, ref: Ref<PdfRef>) => {
     <DndProvider backend={HTML5Backend}>
       <div className="pdf-drag-box">
         {pdf ? (
-          <div style={{ overflow: "hidden", clear: "both", margin: "-.5rem" }}>
+          <div
+            style={{
+              overflow: "hidden",
+              clear: "both",
+              margin: "-.5rem",
+              display: "flex",
+            }}
+          >
             <div className="boxes-section">
               <div
                 className="flex justify-space-between align-center flex-wrap"
