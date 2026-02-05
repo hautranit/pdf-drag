@@ -111,15 +111,16 @@ export const Box: FC<BoxProps> = ({
       const imgWidth = imgEle?.clientWidth;
 
       if (imgWidth > 0) {
-        if (boxWidth / 2 <= imgWidth) {
-          imgEle.style.width = `100%`;
-        } else {
-          imgEle.style.width = "auto";
-        }
+        // if (boxWidth / 2 <= imgWidth) {
+        //   imgEle.style.width = `100%`;
+        // } else {
+        //   imgEle.style.width = "auto";
+        // }
+        imgEle.style.width = "100%";
       } else {
         setTimeout(() => {
           resizeImage(boxWidth);
-        }, 500);
+        }, 0);
       }
     }
   };

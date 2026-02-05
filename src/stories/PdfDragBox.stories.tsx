@@ -23,7 +23,7 @@ const Template: StoryFn<PdfDragBoxProps> = (args: PdfDragBoxProps) => {
 
   const handleClick1 = (dataT: PdfDragBoxData[]) => {
     const newData = dataT.map((item) => {
-      return { ...item, isShowImage: false };
+      return { ...item, texts: [] };
     });
     ref.current?.updateData(newData);
   };
